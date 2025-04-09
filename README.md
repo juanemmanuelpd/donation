@@ -51,3 +51,7 @@ Write a thank you to the donors who supported the cause, and the donation campai
 * leader - Displays the name of the donation campaign leader.
 * leaderAddress - Displays the address of the donation campaign leader.
 * reason - Shows the reason why the leader created the donation campaign.
+
+
+
+CODE IS LAW!
