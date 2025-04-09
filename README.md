@@ -30,9 +30,24 @@ Run simple and transparent donation campaigns through the blockchain.
 
 *  function donate() - To run this function, the following is required:
 
-  ** The amount to be donated must be greater than 0 WEI -> require(msg.value > 0, "Enter a valid amount");
-  ** The donation campaign must not have ended -> require(finalized == false, "This donation campaign has ended");
+1. The amount to be donated must be greater than 0 WEI -> require(msg.value > 0, "Enter a valid amount");
+2. The donation campaign must not have ended -> require(finalized == false, "This donation campaign has ended");
 
 This function records the donor's name and the amount of WEI donated in arrays. These arrays can be queried by anyone to verify this data.
 
-*
+* function endCampaign() - To execute this function, the following is required:
+
+1. Be the leader of the donation campaign -> require(msg.sender == leaderAddress, "You are not the leader of this campaign");
+
+Write a thank you to the donors who supported the cause, and the donation campaign will end. After this, no more donations can be made to this contract.
+
+## Contract interface details 📌
+
+* donate - Enter the donor's name and the amount to donate.
+* endCampaign - The leader ends the donation campaign and leaves a message of thanks for the donors.
+* amountCollected - Displays the total amount of assets currently collected.
+* donor - Check the names of the people who have donated, in order from oldest (0) to most recent (n).
+* donorAmount - Check the amount of assets donated by each person, in order from oldest (0) to most recent (n).
+* leader - Displays the name of the donation campaign leader.
+* leaderAddress - Displays the address of the donation campaign leader.
+* reason - Shows the reason why the leader created the donation campaign.
