@@ -17,8 +17,8 @@ contract donation{
     address public leaderAddress;
     string[] public donor;
     uint256[] public donorAmount;
-    uint  i = 0; 
-    uint  k = 0;
+    uint private i = 0; 
+    uint private k = 0;
     uint256 public amountCollected;
     bool private finalized = false;
 
